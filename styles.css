@@ -145,6 +145,7 @@ nav {
   width: auto;
   color: white;
   margin: 10px;
+  background: transparent;
 }
 
 .second-top {
@@ -231,7 +232,7 @@ flex-wrap: wrap;
 }
 
 .card-top {
-background-size: 125%;
+background-size: 120%;
 }
 
 .seventh-top {
@@ -272,7 +273,10 @@ background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(
 background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/carol-two.jpg');}
 
 .sixth-top {
-background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/michonne-two.jpg');}
+background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/michonne-two.jpg');
+background-position: 0px -10px;
+}
+
 
 .seventh-top {
 background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/walker-two.jpg');}
