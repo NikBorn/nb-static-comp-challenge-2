@@ -17,17 +17,38 @@ body {
 header {
   background-color: #2B2B2B;
   color: lightgrey;
+  display: flex;
   height: 120px;
-  width: 100%;
+  justify-content: space-between;
   padding-top: 10px;
+  width: 100%;
 }
 
 .share-link,
 .playlist-link,
 .personal-vids-link {
+  color: #7B7D7F;
   display: flex;
+  margin-top: 5px;
 }
 
+.share-link:hover,
+.playlist-link:hover,
+.personal-vids-link:hover {
+  color: white;
+}
+
+.admin-logo {
+  background-image: url(images/profile-icon.png);
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+}
+
+.admin-user-logo {
+  color: #27A2E0;
+  display: flex;
+}
 
 .admin-username-link {
   display: flex;
@@ -52,19 +73,40 @@ h4 {
 }
 
 h5 {
-  font-size: 12px;
+  font-size: 11px;
   margin-top: 20px;;
 }
 
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-username-link {
+  align-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.wd-logo {
+  background-image: url('images/walking-dead-logo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75px;
+  margin-left: 50px;
+  margin-top: 8px;
+  width: 90px;
+}
+
 .shares-section {
+  background-color: #B8BCBF;
   padding: 12px 0 50px 0;
-  background-color: #EFEFEF;
   width: 100%;
 }
 
 .shares-title {
-  margin-bottom:10px;
   display: block;
+  margin-bottom:10px;
   width: 100%;
 }
 
@@ -73,7 +115,7 @@ h5 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   display: flex;
   flex-direction: column;
-  height: 330px;
+  height: 350px;
   margin: 6px auto;
   width: 90%;
 }
@@ -85,7 +127,24 @@ h5 {
   background-size: 110% auto;
   height: 180px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
+.arrow {
+  background-image: url('images/arrow-forward.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 12px;
+  height: 40px;
+  width: 40px;
+}
+
+.views-div {
+  height: auto;
+  width: auto;
+  color: white;
+  margin: 10px;
 }
 
 .second-top {
@@ -103,13 +162,12 @@ background-position: -30px 0px;
 }
 
 .fifth-top,
-.sixth-top,
-.seventh-top {
-  background-position: -30px -10px;
+.sixth-top, {
+background-position: -30px -10px;
 }
 
 .fifth-top {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/carol.jpg');
+background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/carol.jpg');
 }
 
 .sixth-top {
@@ -118,6 +176,7 @@ background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(
 
 .seventh-top {
 background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/walker.jpg');
+background-position: -60px -10px;
 }
 
 .eigth-top {
@@ -126,37 +185,61 @@ background-position: 0px 0px;
 }
 
 .card-body {
-  display: flex;
-  flex-direction: column;
-  height: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 4%;
-  width: 90%;
+display: flex;
+flex-direction: column;
+height: 90%;
+margin-left: auto;
+margin-right: auto;
+padding-top: 4%;
+width: 90%;
 }
 
 .date-time {
-  font-size: 12px;
+font-size: 12px;
 }
 
 .card-link-box {
-  background-color: #EFEFEF;
-  font-size: 11px;
-  margin-top: 10px;
-  padding:4px;
-  word-wrap: break-word;
+background-color: #EFEFEF;
+font-size: 11px;
+margin-top: 10px;
+padding: 4px;
+word-wrap: break-word;
+text-overflow: ellipsis;
+/*this isn't working*/
 }
 
-@media screen and (min-width: 550px){
+.card-attach-num {
+color: red;
+font-size: 40px;
+}
+
+@media screen and (min-width: 475px){
+
+nav {
+display: flex;
+flex-direction: row;
+height: 20px;
+justify-content: space-between;
+padding-top: 75px;
+width: 320px;
+}
 
 .shares-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+.card-top {
+background-size: 125%;
+}
+
+.seventh-top {
+background-size: 140%;
 }
 
 .share-card {
-  width: 45%;
+width: 48%;
 }
 
 }
@@ -164,45 +247,57 @@ background-position: 0px 0px;
 @media screen and (min-width: 750px){
 
 .share-card{
-  width: 30%;
+  width: 32%;
 }
 
 .first-top {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/negan-lucille.jpg');
-  background-position: -20px 0px;    background-size: 110% auto;
-  height: 180px;
-  width: 100%;
-  }
-  .second-top {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/rick-grime-two.jpg');
-  background-position: -20px -10px;}
-  .third-top {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/daryl-dixon-hd.jpg');
-  }
-  .fourth-top {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/glenn-rhee.jpg');}
-  .fifth-top {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/carol-two.jpg');}
-  .sixth-top {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/michonne-two.jpg');}
-  .seventh-top {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/walker-two.jpg');}
-  .eigth-top {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/ezekiel-two.jpg');
-background-position: -10px -10px;}
+background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/negan-lucille.jpg');
+background-position: -20px 0px;    background-size: 110% auto;
+height: 180px;
+width: 100%;
+}
+
+.second-top {
+background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/rick-grime-two.jpg');
+background-position: -20px -10px;}
+
+.third-top {
+background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/daryl-dixon-hd.jpg');
+}
+
+.fourth-top {
+background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/glenn-rhee.jpg');}
+
+.fifth-top {
+background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/carol-two.jpg');}
+
+.sixth-top {
+background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/michonne-two.jpg');}
+
+.seventh-top {
+background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/walker-two.jpg');}
+
+.eigth-top {
+background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/ezekiel-two.jpg');
+background-position: -10px -10px;
+}
 
 }
 
 @media screen and (min-width: 900px){
-  .share-card {
-    width: 24%;
-  }
-  .second-top {
-    background-position: -20px -12px;}
-    .third-top {
-  }
-  .fifth-top{
-    background-position: -30px 0px;
 
-  }
+.share-card {
+width: 24%;
+}
+
+.second-top {
+background-position: -20px -12px;}
+
+.third-top {
+}
+
+.fifth-top{
+background-position: -30px 0px;
+}
+
 }
